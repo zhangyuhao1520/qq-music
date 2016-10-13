@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音乐播放器</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<audio id="audio" src="mp3/Love_Story-Taylor_Swift.mp3"></audio>
+	<div class="player">
+		<div class="play-list">
+			<!-- 播放导航开始 -->
+			<div class="header">
+				<div class="header-play-list">播放列表</div>
+				<div class="header-clear-list">清空列表</div>
+			</div>
+			<!-- 播放导航结束 -->
+			<!-- 歌曲列表页 -->
+			<div class="music-list">
+				<!-- <ul class="song-list"> -->
+					<!-- <li class="song-name"></li>
+					<li class="song-author"></li>
+					<li class="song-time"></li>
+					<div class="song-share">
+						<ul>
+							<li class="love"></li>
+							<li class="share"></li>
+							<li class="collect"></li>
+							<li class="delete"></li>
+						</ul>
+					</div> -->
+				<!-- </ul> -->
+			</div>
+			<!-- 歌曲列表页结束 -->
+		</div>
+
+		
+		<!-- 播放开始 -->
+		<div class="mini-player">
+
+			<div class="picture">
+				<img src="img/1.jpg" alt="">
+			</div>
+			<ul class="song-message">
+				<li class="songName"></li>
+				<li class="songAuthor"></li>
+				<li class="songTime"></li>
+				<div class="songCollect"></div>
+				<div class="songShare"></div>
+			`1</ul>
+			<div class="control">
+				<div class="yincang"></div>
+				<div class="content"></div>
+				<div class="zhankai">
+					<div class="number"></div>
+				</div>
+			</div>
+			<div class="jiantou">
+				<div class="left-jian"></div>
+				<div class="middle-jian" title="播放/暂停(P)"></div>
+				<div class="right-jian"></div>
+				<div class="qiehuan">	
+					<div class="qiehuan-four">
+					   <div class="order"title="顺序播放"></div>
+					   <div class="random"title="随机播放"></div>
+					   <div class="single"title="单曲循环"></div>
+					   <div class="list"title="列表播放"></div>
+				    </div>
+			   </div>
+
+				<div class="volume"></div>
+
+				<div class="line">
+					<div class="line1"></div>
+					<div class="ball"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 播放结束 -->
+		<!-- 进度条开始 -->
+		<div class="gequjindu">
+			<div class="jindutiao"></div>
+			<div class="jindudian"></div>
+			<div class="jindutishi">
+			<span>--:--</span>
+			<div class='xiaosanjiao'></div>
+		    </div>
+		</div>
+		
+		<!-- 进度条结束 -->
+	</div>
+</body>
+</html>

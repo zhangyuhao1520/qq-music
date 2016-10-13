@@ -1,0 +1,528 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+/*列表开始*/
+
+.play-list{
+	width: 540px;height: 456px;
+	background: #1B1B1B;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 121px;
+	margin: 0 auto;
+}
+.play-list .header{
+	height: 52px;
+	background: #000;
+	position: relative;
+}
+.header-play-list{
+	width: 50%;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	line-height: 52px;
+	background: #262626;
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+}
+.header .header-clear-list{
+	line-height: 52px;
+	color: #999;
+	position: absolute;
+	right: 60px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.play-list .song-list{
+	width: 480px;
+	padding: 0 30px;
+	color: #999;
+	font-size: 14px;
+	margin-top: 5px;
+	line-height: 26px;
+}
+/*111111111*/
+.song-list.bs{
+	color: #13C65B;
+}
+.song-list::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.play-list .song-list:hover{
+	cursor: pointer;
+	background: #000;
+	color: #fff;
+}
+.play-list .song-list:hover .song-share{
+	display: block;
+}
+.play-list .song-list li{
+	float: left;
+}
+.play-list .song-list .song-name{
+	width: 40%;
+}
+.play-list .song-list .song-author{
+	width: 40%;
+}
+.play-list .song-list .songshichang{
+	width: 20%;
+	text-align: right;
+}
+.song-share{
+	width: 110px;
+	height:26px;
+	position: absolute;
+	background: #000;
+	right: 0;
+	display: none;
+}
+.song-share li{
+	float: left;
+	margin-right: 10px;
+	margin-top: 6px;
+}
+/*.love{
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: 0 -127px;
+}
+.love:hover{
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: 0 -145px;
+}*/
+/*.share{
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: -16px -127px;
+}
+.share:hover{
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: -16px -145px;
+}*/
+/*.collect{
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: -63px -127px;
+}
+.collect:hover{
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: -63px -145px;
+}*/
+.delete{
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: -47px -127px;
+}
+.delete:hover{
+	cursor: pointer;
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: -47px -145px;
+}
+/*列表结束*/
+/*播放开始*/
+.mini-player{
+	width: 540px;height: 111px;
+	background: #000;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom:10px;
+}
+.mini-player .picture{
+	width: 90px;
+	height: 90px;
+	margin-top: 10px;
+	margin-left: 10px;
+	float:left; 
+	overflow: hidden;
+}
+.mini-player .song-message{
+	width: 60px;
+	height: 100%;
+	float: left;
+	margin-left: 10px;
+	line-height: 25px;
+}
+.mini-player .song-message li{
+	font-size: 12px;
+	color: #828282;
+	
+}
+.songName{
+	font-size:12px;
+	color:#fff;
+}
+.song-message .songCollect{
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-top: 6px;
+	background: url(../img/1.png);
+	background-position: 0 -127px;
+}
+.song-message .songCollect:hover{
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	background: url(../img/1.png);
+	background-position: 0 -145px;
+}
+.song-message .songShare{
+	float: left;
+	margin-top: 6px;
+	margin-left: 5px;
+	width: 18px;height: 18px;
+	background: url(../img/1.png);
+	background-position: -16px -127px;
+}
+.song-message .songShare:hover{
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	background: url(../img/1.png);
+	background-position: -16px -145px;
+}
+.control{
+	width: 370px;
+	height:48px;
+	float: left;
+}
+.yincang{
+	width: 75px;
+	height: 20px;
+	margin-left: 30px;
+	margin-top: 5px;
+	float: left;
+	background: url(../img/1.png);
+	background-position: -453px -55px;
+}
+.zhankai{
+	width: 47px;
+	height: 28px;
+	position: relative;
+	float:right;
+	margin-right: 10px;
+	background: url(../img/1.png);
+	background-position: -222px -97px;
+}
+.zhankai .number{
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	right:5px;
+	top:5px;
+
+}
+.content{
+	width: 14px;height: 14px;
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	background: url(../img/1.png);
+	background-position: -452px 0;
+}
+.jiantou{
+	width:320px;height: 63px;
+	float: right;
+}
+.jiantou .left-jian{
+	width: 34px;height: 29px;
+	background: url(../img/1.png);
+	background-position:-70px 0; 
+	float: left;
+	margin-top: 12px;
+}
+.jiantou .left-jian:hover{
+	cursor: pointer;
+	width: 34px;height: 29px;
+	background: url(../img/1.png);
+	background-position:-70px -32px; 
+}
+.jiantou .middle-jian{
+	width: 38px;height:43px;
+	background: url(../img/1.png);
+	background-position: -110px 5px;
+	float: left;
+	margin-left: 10px;
+}
+.jiantou .middle-jian:hover{
+	cursor: pointer;
+	width: 38px;height:43px;
+	background: url(../img/1.png);
+	background-position: -110px -37px;
+}
+.jiantou .bofang{
+	width: 42px;height:42px;
+	background: url(../img/1.png);
+	background-position: -291px -88px;
+	float: left;
+	margin-top: 5px;
+
+}
+.jiantou .bofang:hover{
+	cursor: pointer;
+	width: 42px;height:42px;
+	background: url(../img/1.png);
+	background-position: -333px -88px;
+}
+.jiantou .right-jian{
+	width: 33px;height: 28px;
+	background: url(../img/1.png);
+	background-position:-148px 0;
+	float: left;
+	margin-top: 12px; 
+}
+.jiantou .right-jian:hover{
+	cursor: pointer;
+	width: 33px;height: 28px;
+	background: url(../img/1.png);
+	background-position:-148px -32px;
+}
+.jiantou .qiehuan{
+	width: 34px;height: 28px;
+	background: url(../img/1.png);
+	background-position: -222px 0;
+	float: left;
+	margin-top: 12px;
+	margin-left: 8px;
+	position: relative;
+}
+.xunhuansx{
+	width: 30px;height: 30px;
+	background: url(../img/1.png);
+	background-position: -299px -30px;
+	float: left;
+	margin-top: 12px;
+	margin-left: 8px;
+	position: relative;
+}
+.xunhuansx:hover{
+	cursor: pointer;
+	background-position: -299px -58px;
+}
+.xunhuansj{
+	width: 30px;height: 30px;
+	background: url(../img/1.png);
+	background-position: -335px -30px;
+	float: left;
+	margin-top: 12px;
+	margin-left: 8px;
+	position: relative;
+}
+.xunhuansj:hover{
+	cursor: pointer;
+	background-position: -335px -58px;
+}
+.xunhuandq{
+	width: 30px;height: 30px;
+	background: url(../img/1.png);
+	background-position: -260px -2px;
+	float: left;
+	margin-top: 12px;
+	margin-left: 8px;
+	position: relative;
+}
+.xunhuandq:hover{
+	cursor: pointer;
+	background-position: -260px -34px;
+}
+.jiantou .qiehuan:hover{
+	cursor: pointer;
+	width: 34px;height: 28px;
+	background: url(../img/1.png);
+	background-position: -222px -32px;
+}
+.qiehuan-four{
+	width: 32px;height: 98px;
+	left:5px;
+	top:-68px;
+	position: absolute;
+	display: none;
+}
+.order{
+	width: 25px;height: 24px;
+	background: url(../img/1.png);
+	background-position: -413px -2px;
+}
+.order:hover{
+	cursor: pointer;
+	background-position: -413px -24px;
+}
+.random{
+	width: 25px;height: 22px;
+	background: url(../img/1.png);
+	background-position: -413px -47px;	
+}
+.random:hover{
+	cursor: pointer;
+	background-position: -413px -69px;
+}
+.single{
+	width: 25px;height: 24px;
+	background: url(../img/1.png);
+	background-position: -380px -2px;
+}
+.single:hover{
+	cursor: pointer;
+	background-position: -380px -24px;
+}
+.list{
+	width: 25px;height: 22px;
+	background: url(../img/1.png);
+	background-position: -380px -45px;
+}
+.list:hover{
+	cursor: pointer;
+	background-position: -380px -67px;
+}
+.jiantou .volume{
+	width: 29px;height: 29px;
+	background: url(../img/1.png);
+	background-position: -185px 0;
+	float: left;
+	margin-top: 12px;
+}
+.jiantou .volume:hover{
+	cursor: pointer;
+	width: 29px;height: 29px;
+	background: url(../img/1.png);
+	background-position: -185px -32px;
+}
+.jiantou .closeyl{
+	width: 26px;height: 26px;
+	background: url(../img/1.png);
+	background-position: -150px -62px;
+	float: left;
+	margin-top: 15px;
+}
+.jiantou .closeyl:hover{
+	cursor: pointer;
+	width: 26px;height: 26px;
+	background: url(../img/1.png);
+	background-position: -187px -62px;
+	float: left;
+	margin-top: 15px;
+}
+.jiantou .line{
+	width: 73px;
+	height:10px;
+	background: url(../img/1.png);
+	background-position: -291px -15px;
+	float: left;
+	margin-top: 25px;
+	margin-left: 5px;
+	position: relative;
+}
+.line .line1{
+	width: 30px;
+	height:10px;
+	background: url(../img/1.png);
+	background-position: -291px -4px;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+.line .line2{
+	width: 30px;
+	height: 10px;
+	background: url(../img/1.png);
+	background-position: -291px -26px;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+.line .ball{
+	width: 6px;
+	height: 10px;
+	background: red;
+	position: absolute;
+	left: 32px;
+	top:-4px;
+	background: url(../img/1.png);
+	background-position: -365px 0px;
+	
+}
+.ball.ball1{
+	width: 6px;
+	height: 10px;
+	position: absolute;
+	left: 28px;
+	top:-2px;
+	background: url(../img/1.png);
+	background-position: -368px -18px;
+	position: absolute;
+}
+/*播放结束*/
+
+
+/*音乐进度条*/
+.gequjindu{
+	width: 540px;
+	height: 6px;
+	background:#323232;
+	position: absolute;
+	bottom: 7px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.gequjindu .jindutiao{
+	width: 0px;
+	height: 6px;
+	background: #f40;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.gequjindu .jindudian{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top:-1px;
+	left: 0px;
+}
+.jindutishi{
+	width:60px;
+	height:30px;
+	background:#f40;
+	border:1px solid #fff;
+	font-size:20px;
+	position: relative;
+	top:-35px;
+	left:-30px;
+	text-align: center;
+	z-index: 20;
+	display: none;
+}
+.xiaosanjiao{
+	width: 15px;
+	height: 15px;
+	background: #f40;
+	border:1px solid #fff;
+	position: absolute;
+	left: 50%;
+	top:23px;
+	margin-left:-10px;
+	transform:rotate(45deg);
+	z-index: 10;
+	display: none;	
+}
